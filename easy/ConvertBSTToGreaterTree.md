@@ -1,5 +1,5 @@
 # 问题
-给定一个二叉搜索树，将所有的节点变为大于原始节点的点与原始节点的和。
+给定一个二叉搜索树，将所有的节点替换为不小于其本身的各节点的和。
 # 代码
 ```python
 class Solution(object):    # 创建一个类，object类是所有类都会继承的类。
@@ -7,7 +7,7 @@ class Solution(object):    # 创建一个类，object类是所有类都会继承
         self.cur_sum = 0
         self.convertHelper(root)
         return root
-    def convertHelper(self, root)
+    def convertHelper(self, root):
         if not root:
             return
         self.convertHelper(root.right)
